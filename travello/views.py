@@ -22,13 +22,7 @@ from datetime import datetime
 from django.contrib.auth.models import User
 import pandas as pd
 from sklearn.neighbors import KNeighborsClassifier
-
-
-
-
-
 from django.core.exceptions import ObjectDoesNotExist
-
 import random
 
 #  __lte=      is eqivelent to lessthan or euivelent

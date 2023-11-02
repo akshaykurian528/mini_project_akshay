@@ -24,6 +24,9 @@ import pandas as pd
 from sklearn.neighbors import KNeighborsClassifier
 
 
+
+
+
 from django.core.exceptions import ObjectDoesNotExist
 
 import random
@@ -244,6 +247,8 @@ def new_page_view(request):
         #  obj = Suggestion(price=price,days=day,food=food,stay=stay,climate=climate,size=fsize,transport=transport,activity=activity,destination=dest)
         #  obj.save()
         # sql table conversion to pandas and KNN
+
+
          queryset = Suggestion.objects.all()
          data = list(queryset.values())
          df = pd.DataFrame(data)
@@ -273,6 +278,9 @@ def new_page_view(request):
      else:
          return render(request,'new_page.html')
         
+
+
+
 
 
 @login_required(login_url='login')
@@ -335,6 +343,10 @@ def otp_verification(request):
         t = Transactions(username=usernameget, Trip_same_id=Trip_same_id1, Amount=amt, Payment_method=pay_method)
         t.save()
         return render(request, 'wrong_OTP.html')
+    
+
+
+    
 
 @login_required(login_url='login')
 def data_fetch(request):

@@ -258,7 +258,7 @@ def new_page_view(request):
          df1['transport'] = df1['transport'].astype(int)
          df1['activity'] = df1['activity'].astype(int)
 
-         dest_dict={"0":"Rome","1":"Venice","2":"Florence","3":"Pisa","4":"Dubai","5":"Burj Khalifa","6":"New York","7":"Isaland","8":"Switzerland","9":"United Kingdom","10":"Indonesia"}
+         dest_dict={0:"Rome",1:"Venice",2:"Florence",3:"Pisa",4:"Dubai",5:"Burj Khalifa",6:"New York",7:"Isaland",8:"Switzerland",9:"United Kingdom",10:"Indonesia"}
 
         #  data_val = data.values
          target_val = target['destination'].tolist()
